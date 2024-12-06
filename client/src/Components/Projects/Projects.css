@@ -1,0 +1,131 @@
+.projects{
+    background-color: hsl(219,48%,8%);
+    min-height: 100vh;
+    padding-top: 15vmax;
+}
+.projects > h5{
+     color: white;
+     text-align: center;
+     position: absolute;
+     background-color: hsl(250,100%,75%);
+     padding: 1vmax 3vmax;
+     display: flex;
+     border-radius: 100px;
+     align-items: center;
+     left: 50%;
+     margin: 2vmax;
+     transform: translateX(-150px) translateY(50px);
+}
+.projects > h4{
+    color: white;
+    text-align: center;
+    position: absolute;
+    background-color: hsl(250,100%,75%);
+    padding: 2vmax 4vmax;
+    display: flex;
+    border-radius: 100px;
+    align-items: center;
+    left: 50%;
+    margin: 2vmax;
+    transform: translateX(-250px) translateY(-60px);
+}
+.projects > h3 > svg {
+    margin: 1vmax;
+}
+.projectsWrapper {
+    border-top: 100px solid white;
+    border-radius: 300px 300px 0 0;
+    min-height: inherit;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5vmax;
+    padding-bottom: 10vmax;
+    overflow-x: hidden;
+}
+.projectCard > div > img{
+    width: inherit;
+   
+}
+.projectCard {
+    width: 80%;
+    text-decoration: none;
+    color: rgba(0,0,0,0.712);
+    margin: 2vmax;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.projectCard > div{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.5s;
+}
+.projectCard > div:first-child::after{
+    content: "VIEW DEMO";
+    width: 70%;
+    height: 10%;
+    font:100 2rem "Roboto";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(250,100%,75%);
+    color:white;
+}
+.projectCard > div:first-child > h5{
+    text-align: center;
+    padding: 2vmax;
+}
+.projectCard > div:last-child{
+    padding: 3vmax;
+}
+.projectCard > div:last-child > h4{
+    text-align: center;
+}
+.projectCard > div:last-child > p{
+    text-align: left;
+}
+.projectCard > div:last-child > h6{
+    font-family: "Ubuntu Mono";
+    font-weight: bold;
+    color: black;
+}
+.projectCard:nth-child(even){
+    flex-direction: row-reverse;
+}
+.projectCard > div:first-child:hover{
+    filter: hue-rotate(240deg) blur(4px);
+}
+@media screen and (max-width:600px) {
+    .projectCard{
+        flex-direction: column;
+    }
+    .projectCard > div{
+        justify-content: center;
+    }
+    .projectCard > div:last-child > p{
+        text-align: center;
+    }
+    .projectCard:nth-child(even){
+        flex-direction: column;
+    }
+    .projects > h5{
+        transform: translateX(-60%) translateY(50px);
+    }
+    .projects > h4{
+        display: none;
+    }
+    .smile{
+        font-size: 5vmax;
+    }
+    .projectCard > div:first-child::after{
+        content: "VIEW DEMO";
+        font:100 1rem "Roboto";
+    }
+}

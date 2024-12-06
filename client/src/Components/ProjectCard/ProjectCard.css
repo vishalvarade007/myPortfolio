@@ -1,0 +1,38 @@
+.projectCard{
+    width: 300px;
+    height: 380px;
+    padding: 1vmax;
+    transition: all 0.5s;
+    margin: 2vmax;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.deleteSvg{
+    font-size: 2vmax;
+}
+.prolink{
+    text-decoration: none;
+   
+}
+.aboutdiv{
+    margin-left: 1vmax;
+}
+.projectCard  img{
+   width:inherit;
+   height: 200px;
+   cursor: pointer;
+}
+.projectCard:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.329);
+}
+
+@media screen and (max-width:600px) {
+     .projectCard{
+        width: 200px;
+        height: 780px;
+        margin-bottom: 5vmax;
+     }
+}
