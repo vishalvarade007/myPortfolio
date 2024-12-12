@@ -13,6 +13,7 @@ import { Projects } from './Components/Projects/Projects';
 import { AdminPanel } from './Components/Admin/AdminPanel';
 import { Timeline } from './Components/Admin/Timeline';
 import { Project } from './Components/Admin/Project';
+import { Loader } from './Components/Loader/Loader';
 
 function App() {
   const dispatch = useDispatch();
@@ -26,7 +27,7 @@ function App() {
   }, [dispatch]);
   return (
     <BrowserRouter>
-     {loading ? (<div>Loading...</div>):(
+     {loading ? (<Loader/>):(
       <>
       <Header/>
       <Routes>

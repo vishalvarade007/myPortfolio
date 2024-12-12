@@ -1,0 +1,25 @@
+.loader{
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    background-color: white;
+    display: grid;
+    place-items: center;
+}
+
+.loader > div{
+    width: 10vmax;
+    height: 10vmax;
+    border-bottom: 7px solid rgb(11, 239, 255);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
