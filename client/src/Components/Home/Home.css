@@ -206,4 +206,8 @@
     .homeSkillsBox{
         right: 0px;
     }
+    .homeCubeSkills{
+        width:100px;
+        height:100px;
+    }
 }

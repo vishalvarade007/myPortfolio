@@ -14,9 +14,11 @@ import { AdminPanel } from './Components/Admin/AdminPanel';
 import { Timeline } from './Components/Admin/Timeline';
 import { Project } from './Components/Admin/Project';
 import { Loader } from './Components/Loader/Loader';
+import { useAlert } from 'react-alert';
 
 function App() {
   const dispatch = useDispatch();
+  const alert = useAlert();
   const {isAuthenticated} = useSelector((state)=>state.login);
   const {loading} = useSelector((state)=>state.user);
   const {user} = useSelector((state)=>state.user);
@@ -24,6 +26,14 @@ function App() {
   useEffect(() => {
    dispatch(getUser());
    dispatch(loadUser());
+   const hasShownNotification = sessionStorage.getItem('hasShownNotification');
+   if(!hasShownNotification){
+     alert.show("Please Wait 60 Seconds To Load The Data",{type:'info'});
+     sessionStorage.setItem('hasShownNotification','true');
+     setTimeout(() => {
+       alert.removeAll();
+     }, 60000);
+   }
   }, [dispatch]);
   return (
     <BrowserRouter>
