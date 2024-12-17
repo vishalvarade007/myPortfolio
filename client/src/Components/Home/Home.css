@@ -148,7 +148,8 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    right: 40px;
+    right: -300px;
+    animation-name: skillsBoxSlide;
     animation-duration: 1s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
@@ -192,6 +193,16 @@
         transform: scale(1.2) translateY(-30px);
     }
 }
+@keyframes skillsBoxSlideOn {
+    to {
+       right: 0px;
+    }
+}
+@keyframes skillsBoxSlideOff {
+    to {
+       right: -300px;
+    }
+}
 
 
 @media screen and (max-width:600px) {
@@ -209,5 +220,14 @@
     .homeCubeSkills{
         width:100px;
         height:100px;
+    }
+    .homeSkills{
+      align-items:flex-end;
+    }
+    .homeSkillsBox{
+        padding: 0 1vmax;
+    }
+    .cubeShadow{
+        visibility:hidden;
     }
 }

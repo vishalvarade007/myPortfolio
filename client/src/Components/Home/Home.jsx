@@ -93,6 +93,18 @@ export function Home() {
       renderer.render(scene, camera);
     };
     animate();
+    return window.addEventListener("scroll", () => {
+      camera.rotation.z = window.scrollY * 0.001;
+      camera.rotation.y = window.scrollY * 0.003;
+
+      const skillsBox = document.getElementById("homeskillsBox");
+
+      if (window.scrollY > 1500) {
+        skillsBox.style.animationName = "skillsBoxSlideOn";
+      } else {
+        skillsBox.style.animationName = "skillsBoxSlideOff";
+      }
+    });
   }, []);
 
   return (
@@ -141,7 +153,7 @@ export function Home() {
           </div>
         </div>
         <div className='cubeShadow'></div>
-        <div className='homeSkillsBox'>
+        <div className='homeSkillsBox' id="homeskillsBox">
           <SiReact />
           <SiMongodb />
           <SiJavascript />

@@ -34,7 +34,7 @@ function App() {
        alert.removeAll();
      }, 60000);
    }
-  }, [dispatch]);
+  }, [dispatch,alert]);
   return (
     <BrowserRouter>
      {loading ? (<Loader/>):(
