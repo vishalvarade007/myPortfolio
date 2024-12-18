@@ -54,6 +54,7 @@ export function Login() {
                      value={email}
                      onChange={(e) => setEmail(e.target.value)}
                      required
+                     className='input1'
                   />
                   <input
                      type='password'
@@ -61,8 +62,9 @@ export function Login() {
                      value={password}
                      onChange={(e) => setPassword(e.target.value)}
                      required
+                     className='input2'
                   />
-                  <Button variant='contained' type='submit' disabled={loading}>
+                  <Button variant='contained' type='submit' disabled={loading} className='submitBtn'>
                      Login
                   </Button>
                </div>

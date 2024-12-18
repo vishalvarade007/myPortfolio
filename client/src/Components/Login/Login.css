@@ -19,6 +19,18 @@
     padding: 2vmax;
     z-index: 1;
 }
+.input1{
+    transform: translateX(-1000px);
+    animation: input1Slide 1s linear forwards;
+}
+.input2{
+    transform: translateX(1000px);
+    animation: input2Slide 1s linear forwards;
+}
+.submitBtn{
+    transform: translateY(-1000px);
+    animation: buttonSlide 1s linear forwards;
+}
 .loginForm > h4 {
     display: flex;
     margin: 2vmax;
@@ -57,6 +69,21 @@
     background-color:black;
 }
 
+@keyframes input1Slide {
+    to{
+        transform: translateX(0px);
+    }
+}
+@keyframes input2Slide {
+    to{
+        transform: translateX(0px);
+    }
+}
+@keyframes buttonSlide {
+    to{
+        transform: translateY(0px);
+    }
+}
 
 @media screen and (max-width:600px) {
     .loginContainer{

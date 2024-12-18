@@ -14,7 +14,8 @@
      align-items: center;
      left: 50%;
      margin: 2vmax;
-     transform: translateX(-150px) translateY(50px);
+     transform: translateY(-100vh);
+     animation: projectHeadingAnimation 1s linear forwards;
 }
 .projects > h4{
     color: white;
@@ -101,6 +102,12 @@
 }
 .projectCard > div:first-child:hover{
     filter: hue-rotate(240deg) blur(4px);
+}
+
+@keyframes projectHeadingAnimation {
+    to{
+        transform: translateX(-150px) translateY(50px);
+    }
 }
 @media screen and (max-width:600px) {
     .projectCard{

@@ -23,7 +23,7 @@ export function ProjectCard({
  }
  return (
    <>
-     <a href={url} className='projectCard'>
+     <a href={url} className='projectCard' id='projectCard'>
       
       <div>
           <img src={projectImage} alt='img'/>

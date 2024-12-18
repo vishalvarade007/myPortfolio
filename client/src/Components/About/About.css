@@ -13,6 +13,8 @@
     justify-content: right;
     padding: 2vmax;
     box-sizing: border-box;
+    transform: translateY(-1000px);
+    animation: aboutContainerSlide1 1s linear forwards;
 }
 .aboutContainer1 > p{
      text-align: right;
@@ -33,7 +35,8 @@
     box-sizing: border-box;
     padding: 2vmax;
     display: flex;
-    transform:translateX(150px) translateY(-50px) ;
+    transform:translateX(-1000px) translateY(-50px);
+    animation: aboutContainerSlide2 1s linear forwards;
 }
 .aboutContainer2 > div {
     width: 100%;
@@ -57,7 +60,16 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.452);
 }
 
-
+@keyframes aboutContainerSlide2 {
+    to{
+        transform:translateX(150px) translateY(-50px);
+    }
+}
+@keyframes aboutContainerSlide1 {
+    to{
+        transform:translateY(0px);
+    }
+}
 @media screen and (max-width:600px) {
     .about{
         align-items: flex-end;

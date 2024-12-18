@@ -8,6 +8,13 @@
     display: flex;
     flex-direction: column;
     text-decoration: none;
+    transform: translateX(-100vw);
+    animation: projectCardAnimation 1s ease-in-out forwards 0.5s;
+}
+.projectCard:nth-child(even){
+    transform: translateX(100vw);
+    flex-direction: row-reverse;
+    animation: projectCardAnimation 1s ease-in-out forwards 1s;
 }
 .deleteSvg{
     font-size: 2vmax;
@@ -27,6 +34,12 @@
 .projectCard:hover{
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(0,0,0,0.329);
+}
+
+@keyframes projectCardAnimation {
+    to{
+        transform: translateX(0);
+    }
 }
 
 @media screen and (max-width:600px) {

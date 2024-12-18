@@ -93,18 +93,26 @@ export function Home() {
       renderer.render(scene, camera);
     };
     animate();
-    return window.addEventListener("scroll", () => {
+    const onScroll = () => {
       camera.rotation.z = window.scrollY * 0.001;
       camera.rotation.y = window.scrollY * 0.003;
-
+  
       const skillsBox = document.getElementById("homeskillsBox");
-
-      if (window.scrollY > 1500) {
-        skillsBox.style.animationName = "skillsBoxSlideOn";
-      } else {
-        skillsBox.style.animationName = "skillsBoxSlideOff";
+      
+      if (skillsBox) {
+        if (window.scrollY > 1500) {
+          skillsBox.style.animationName = "skillsBoxSlideOn";
+        } else {
+          skillsBox.style.animationName = "skillsBoxSlideOff";
+        }
       }
-    });
+    };
+  
+    window.addEventListener("scroll", onScroll);
+  
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
   return (

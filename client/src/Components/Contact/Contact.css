@@ -20,7 +20,8 @@
     display: flex;
     box-shadow: 0 0 10px rgba(0,0,0,0.473);
     justify-content: center;
-    transform: translateY(-250px) translateX(250px);
+    transform: translateY(-250px) translateX(-1000px);
+    animation: contactContainerSlide 1s linear forwards;
 }
 .contactContainerForm {
     display: flex;
@@ -48,7 +49,11 @@
 .contactContainerForm > button:hover{
     background-color: hsl(219,48%,8%);
 }
-
+@keyframes contactContainerSlide {
+     to{
+        transform: translateY(-250px) translateX(250px);
+     }
+}
 @media screen and (max-width:600px) {
     .contactContainer{
         transform: translateY(-44%) translateX(15px);
